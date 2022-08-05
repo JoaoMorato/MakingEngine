@@ -3,8 +3,8 @@
 #define _ENGINE_GAME_
 
 #include <GLFW/glfw3.h>
-#include "Object.hpp"
-#include "Vectors.hpp"
+#include "Components\Object.hpp"
+#include "Components\Vectors.hpp"
 
 ref class EngineGame {
 private:

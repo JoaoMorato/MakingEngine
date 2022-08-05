@@ -4,10 +4,10 @@
 #include <time.h>
 #include <stdio.h>
 
-#include "Object.hpp"
+#include "Components\Object.hpp"
+#include "Engine.hpp"
 #include "Components.hpp"
 #include "Components_UI.hpp"
-#include "Engine.hpp"
 #include "Keyboard.hpp"
 
 #define DEBUG_MODE 0
@@ -17,9 +17,8 @@ void Update() {
 
     GameObject* obj = new GameObject();
     InitObj(obj);
-    Transform* sp = obj->AddComponent<Transform>();
-    //Sprite* sp = (Sprite*)obj->AddComponent(Sprite());
-    //Sprite* sp = obj->AddComponent<Sprite>();
+    //Transform* sp = obj->AddComponent<Transform>();
+    Sprite* sp = obj->AddComponent<Sprite>();
 
     while (EngineGame::IsRunnig()) {
         EngineGame::Update();

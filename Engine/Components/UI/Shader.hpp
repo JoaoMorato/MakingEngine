@@ -2,7 +2,7 @@
 #ifndef _SHADER_COMPONENT_
 #define _SHADER_COMPONENT_
 
-#include "Vectors.hpp"
+#include "..\Vectors.hpp"
 
 class Shader {
 private:

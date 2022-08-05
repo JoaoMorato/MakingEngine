@@ -2,7 +2,7 @@
 #ifndef _TRANSFORM_COMPONENT_
 #define _TRANSFORM_COMPONENT_
 
-#include "./Vectors.hpp"
+#include "Vectors.hpp"
 
 class Transform {
 public:

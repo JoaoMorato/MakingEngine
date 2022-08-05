@@ -207,35 +207,35 @@
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Components\UI\Camera.cpp" />
+    <ClCompile Include="Components\UI\Color.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Components\Object.cpp" />
+    <ClCompile Include="Components\UI\Shader.cpp" />
+    <ClCompile Include="Components\UI\Sprite.cpp" />
     <ClCompile Include="SystemFirehot.cpp" />
-    <ClCompile Include="Transform.cpp" />
-    <ClCompile Include="Vectors.cpp" />
+    <ClCompile Include="Components\Transform.cpp" />
+    <ClCompile Include="Components\Vectors.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Color.hpp" />
+    <ClInclude Include="Components\UI\Color.hpp" />
     <ClInclude Include="Components_UI.hpp" />
-    <ClInclude Include="Object.hpp" />
-    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="Components\Object.hpp" />
+    <ClInclude Include="Components\UI\Camera.hpp" />
     <ClInclude Include="Components.hpp" />
     <ClInclude Include="Engine.hpp" />
     <ClInclude Include="Keyboard.hpp" />
     <ClInclude Include="Physics.hpp" />
-    <ClInclude Include="Shader.hpp" />
+    <ClInclude Include="Components\UI\Shader.hpp" />
     <ClInclude Include="SystemFirehot.hpp" />
-    <ClInclude Include="Transform.hpp" />
-    <ClInclude Include="UI.hpp" />
-    <ClInclude Include="Vectors.hpp" />
+    <ClInclude Include="Components\Transform.hpp" />
+    <ClInclude Include="Components\UI\UI.hpp" />
+    <ClInclude Include="Components\Vectors.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Sprite.hpp" />
+    <None Include="Components\UI\Sprite.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

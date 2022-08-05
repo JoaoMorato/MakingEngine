@@ -3,8 +3,8 @@
 #define _SPRITE_COMPONENT_
 
 #include <sstream>
-#include "Object.hpp"
-#include "Vectors.hpp"
+#include "..\Object.hpp"
+#include "..\Vectors.hpp"
 #include "Color.hpp"
 #include "Shader.hpp"
 

@@ -2,7 +2,7 @@
 #ifndef _Components_
 #define _Components_
 
-#include "Transform.hpp"
-#include "Vectors.hpp"
+#include "Components\Transform.hpp"
+#include "Components\Vectors.hpp"
 
 #endif // !_Components_

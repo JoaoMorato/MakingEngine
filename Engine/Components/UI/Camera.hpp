@@ -2,8 +2,8 @@
 #ifndef _CAMERA_COMPONENT_
 #define _CAMERA_COMPONENT_
 
-#include "Object.hpp"
-#include "SystemFirehot.hpp"
+#include "..\Object.hpp"
+#include "..\..\SystemFirehot.hpp"
 #include "Color.hpp"
 
 class Camera :public Component {

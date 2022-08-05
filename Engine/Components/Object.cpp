@@ -1,7 +1,7 @@
 #include "Object.hpp"
 #include <time.h>
 #include <stdlib.h>
-#include "Engine.hpp"
+#include "..\Engine.hpp"
 
 Component::Component() {}
 

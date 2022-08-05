@@ -2,6 +2,16 @@
 #include <math.h>
 
 //Vector 2
+V2::V2() {
+    this->x = 0;
+    this->y = 0;
+}
+
+V2::V2(float x, float y) {
+    this->x = x;
+    this->y = y;
+}
+
 V2 V2::operator + (V2 num) {
     return V2(num.x + x, num.y + y);
 }
@@ -57,6 +67,18 @@ long double V2::Module() {
 }
 
 //Vector 3
+V3::V3() {
+    this->x = 0;
+    this->y = 0;
+    this->z = 0;
+}
+
+V3::V3(float x, float y, float z) {
+    this->x = x;
+    this->y = y;
+    this->z = z;
+}
+
 V3 V3::operator + (V3 num) {
     return V3(num.x + x, num.y + y, num.z + z);
 }

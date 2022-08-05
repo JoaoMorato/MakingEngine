@@ -1,6 +1,5 @@
 #include <time.h>
 #include <vector>
-#include "Object.hpp"
 #include "Engine.hpp"
 #include "Keyboard.hpp"
 #include "Physics.hpp"
