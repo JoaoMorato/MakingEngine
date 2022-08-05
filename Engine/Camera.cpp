@@ -17,9 +17,9 @@ void Camera::Update() {
 }
 
 void Camera::LookAt(V3 target) {
-	float posX = target.x - gameObject->transform->position.x;
-	float posY = target.y - gameObject->transform->position.y;
-	float posZ = target.z - gameObject->transform->position.z;
+	float posX = target.x - gameObject->transform.position.x;
+	float posY = target.y - gameObject->transform.position.y;
+	float posZ = target.z - gameObject->transform.position.z;
 	V3 dir = V3(posX, posY, posZ);
 	
 	dir = dir / dir.Module();
@@ -30,8 +30,8 @@ void Camera::LookAt(V3 target) {
 	Y = Y / Y.Module();
 	float totalXZ = posX * posX + posZ * posZ;
 	float resultXZ = sqrt(totalXZ);
-	float numX = Mod(gameObject->transform->position.x - target.x);
-	if (gameObject->transform->position.z > 0)
+	float numX = Mod(gameObject->transform.position.x - target.x);
+	if (gameObject->transform.position.z > 0)
 		numX *= -1;
-	gameObject->transform->angle.y = RadToDegrees(acos(numX / resultXZ));
+	gameObject->transform.angle.y = acos(numX / resultXZ) * 180 / System::Math::PI;
 }

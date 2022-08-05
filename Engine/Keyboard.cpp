@@ -1,79 +1,66 @@
 #include "Keyboard.hpp"
 #include <iostream>
 
+#include <vector>
+
+std::vector<short> keys;
+std::vector<short> keyDown;
+std::vector<short> keyUp;
+
+
 bool Input::GetKey(Key key){
-	bool result = false;
-	for (int i = 0; i < MAX_KEY_PRESS; i++) {
-		if (keys[i] == (int)key) { result = true; break; }
+	for each (short k in keys) {
+		if (k == (int)key) {
+			return true;
+		}
 	}
-	return result;
+	return false;
 }
 
 bool Input::GetKeyDown(Key key) {
-	bool result = false;
-	for (int i = 0; i < MAX_KEY_PRESS; i++) {
-		if (keyDown[i] == (int)key) { result = true; break; }
+	for each (short k in keyDown) {
+		if (k == (int)key) {
+			return true;
+		}
 	}
-	return result;
+	return false;
 }
 
 bool Input::GetKeyUp(Key key) {
-	bool result = false;
-	for (int i = 0; i < MAX_KEY_PRESS; i++) {
-		if (keyUp[i] == (int)key) { result = true; break; }
+	for each (short k in keyUp) {
+		if (k == (int)key) {
+			return true;
+		}
 	}
-	return result;
+	return false;
 }
 
 void Input::KeyPress(int key) {
 	if (key == -1) return;
-	for (size_t i = 0; i < MAX_KEY_PRESS; i++) {
-		if (key == keys[i]) return;
+	if (key >= 'a' && key <= 'z') {
+		key = 'A' + (key - 'a');
 	}
 	for (size_t i = 0; i < MAX_KEY_PRESS; i++) {
-		if (keys[i] == 0) {
-			keys[i] = key;
-			for (size_t j = 0; j < MAX_KEY_PRESS; j++) {
-				if (keyDown[i] == 0) {
-					keyDown[i] = key;
-					break;
-				}
-			}
-			break;
-		}
+		if (GetKey((Key)key)) return;
 	}
+	keys.push_back((short)key);
+	keyDown.push_back((short)key);
 }
 
 void Input::KeyUp(int key) {
 	if (key == -1) return;
-	for (size_t i = 0; i < MAX_KEY_PRESS; i++) {
-		if (Input::keys[i] == key) {
-			Input::keys[i] = 0;
-			for (size_t j = 0; j < MAX_KEY_PRESS; j++) {
-				if (keyUp[i] == 0) {
-					keyUp[i] = key;
-					break;
-				}
-			}
-			break;
+	if (key >= 'a' && key <= 'z') {
+		key = 'A' + (key - 'a');
+	}
+	for (size_t i = 0; i < keys.size(); i++) {
+		if (keys[i] == (short)key) {
+			keys.erase(keys.begin() + i);
+			keyUp.push_back((short)key);
 		}
 	}
 }
 
 void Input::ClearKeys() {
-	keyDown = (short*)malloc(MAX_KEY_PRESS * sizeof(short));
-	keyUp = (short*)malloc(MAX_KEY_PRESS * sizeof(short));
-	keys = (short*)malloc(MAX_KEY_PRESS* sizeof(short));
-	for (size_t i = 0; i < MAX_KEY_PRESS; i++) {
-		keys[i] = 0;
-		keyUp[i] = 0;
-		keyDown[i] = 0;
-	}
-}
-
-void Input::ClearKeyPress() {
-	for (size_t i = 0; i < MAX_KEY_PRESS; i++) {
-		keyUp[i] = 0;
-		keyDown[i] = 0;
-	}
+	keyUp.clear();
+	keyDown.clear();
 }

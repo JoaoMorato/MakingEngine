@@ -1,4 +1,7 @@
 #pragma once
+#ifndef _VECTORS_COMPONENT_
+#define _VECTORS_COMPONENT_
+
 
 class V2 {
 public:
@@ -66,3 +69,5 @@ public:
 	bool operator == (V3 num);
 	bool operator != (V3 num);
 };
+
+#endif // !_VECTORS_COMPONENT_

@@ -1,10 +1,12 @@
 #pragma once
-#include "firehot.hpp"
+#ifndef _UI_
+#define _UI_
+
+#include "Vectors.hpp"
 
 class UI {
-private:
-	V2 resolution = V2(800, 450);
-
 public:
-
+	V2 resolution = V2(800, 450);
 };
+
+#endif // !_UI_

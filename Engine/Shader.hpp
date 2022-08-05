@@ -1,5 +1,8 @@
 #pragma once
-#include "firehot.hpp"
+#ifndef _SHADER_COMPONENT_
+#define _SHADER_COMPONENT_
+
+#include "Vectors.hpp"
 
 class Shader {
 private:
@@ -9,3 +12,4 @@ public:
 	unsigned int GetSize();
 	void SetVertices(V3 *_vertices, int lenght);
 };
+#endif // !_SHADER_COMPONENT_

@@ -1,8 +1,7 @@
 #pragma once
-#ifndef _FIRE_KEYBOARD_
-#define _FIRE_KEYBOARD_
+#ifndef _INPUT_KEYBOARD_
+#define _INPUT_KEYBOARD_
 
-#include "firehot.hpp"
 #include "GLFW/glfw3.h"
 
 #define MAX_KEY_PRESS 10
@@ -24,21 +23,16 @@ enum class Key {
 	RIGHT_SHIFT = 344, RIGHT_CTRL, RIGHT_ALT, MENU
 };
 
-ref class Input {
-private:
-	static short *keyUp;
-	static short *keyDown;
-	static short *keys;
+class Input {
 public:
-static bool GetKey(Key key);
-static bool GetKeyDown(Key key);
-static bool GetKeyUp(Key key);
-static void KeyPress(int);
-static void KeyUp(int);
-static void ClearKeys();
-static void ClearKeyPress();
+	static bool GetKey(Key);
+	static bool GetKeyDown(Key);
+	static bool GetKeyUp(Key);
+	static void KeyPress(int);
+	static void KeyUp(int);
+	static void ClearKeys();
 };
 
 
 
-#endif // _FIRE_KEYBOARD_
+#endif // !_INPUT_KEYBOARD_

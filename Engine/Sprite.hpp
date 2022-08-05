@@ -1,7 +1,12 @@
 #pragma once
-#include "firehot.hpp"
-#include "Shader.hpp"
+#ifndef _SPRITE_COMPONENT_
+#define _SPRITE_COMPONENT_
+
 #include <sstream>
+#include "Object.hpp"
+#include "Vectors.hpp"
+#include "Color.hpp"
+#include "Shader.hpp"
 
 class Sprite: public Component {
 private:
@@ -13,11 +18,13 @@ private:
 	V3 lastScale;
 	void ChangeScale();
 public:
-	void Update();
 	void Start();
+	void Update();
 	std::string sprite = "liquid.jpg";
 	bool rootX = false;
 	bool rootY = false;
 	unsigned int level = 0;
 	~Sprite();
 };
+
+#endif // !_SPRITE_COMPONENT_

@@ -1,9 +1,8 @@
-#include "Sprite.hpp"
+#define GLEW_STATIC
 #include <fstream>
 #include <iostream>
-#include "Shader.hpp"
 #include "GL/glew.h"
-#include "GLFW/glfw3.h"
+#include "Sprite.hpp"
 
 
 std::string lastFile = "";
@@ -28,36 +27,38 @@ void Sprite::SetBytes() {
 }
 
 void Sprite::Update() {
+	printf("Update");
 	if (lastFile != sprite) {
 		lastFile = sprite;
 		SetBytes();
 	}
-	if (lastScale != gameObject->transform->scale)
+	if (lastScale != gameObject->transform.scale)
 		ChangeScale();
 	if (sizeBytes == 0) {
 		return;
 	}
 	glBindBuffer(GL_ARRAY_BUFFER, idImage);
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 	glDrawArrays(GL_QUADS, 0, 4);
 }
 
 void Sprite::ChangeScale() {
 	float posis[] = {
-		-gameObject->transform->scale.x / 2,  gameObject->transform->scale.y / 2,
-		-gameObject->transform->scale.x / 2, -gameObject->transform->scale.y / 2,
-		 gameObject->transform->scale.x / 2, -gameObject->transform->scale.y / 2,
-		 gameObject->transform->scale.x / 2,  gameObject->transform->scale.y / 2
+		-gameObject->transform.scale.x / 2,  gameObject->transform.scale.y / 2,
+		-gameObject->transform.scale.x / 2, -gameObject->transform.scale.y / 2,
+		 gameObject->transform.scale.x / 2, -gameObject->transform.scale.y / 2,
+		 gameObject->transform.scale.x / 2,  gameObject->transform.scale.y / 2
 	};
-	lastScale = gameObject->transform->scale;
-	printf("%f %f %f %f", posis[0], posis[1], posis[2], posis[3]);
+	lastScale = gameObject->transform.scale;
+	//printf("%f %f %f %f", posis[0], posis[1], posis[2], posis[3]);
 	glBufferData(GL_ARRAY_BUFFER, 8 * sizeof(float), posis, GL_STATIC_DRAW);
 }
 
 void Sprite::Start(){
-
 	glGenBuffers(1, &idImage);
 	glBindBuffer(GL_ARRAY_BUFFER, idImage);
-	glVertexAtt
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 	ChangeScale();
 	lastFile = sprite;
 	SetBytes();

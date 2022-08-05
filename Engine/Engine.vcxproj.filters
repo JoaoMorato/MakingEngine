@@ -13,56 +13,98 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Origem\Components">
+      <UniqueIdentifier>{5888d9ce-5b79-4eb5-ba40-f46b9bed7474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Components">
+      <UniqueIdentifier>{c56d22f1-39ec-4e70-b716-a4ec8d51964d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Components\UI">
+      <UniqueIdentifier>{a292b984-b59d-44ba-8267-62d109573313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Components\UI">
+      <UniqueIdentifier>{7dc97978-ac4c-4a82-805b-dcdc42eab593}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="firehot.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="Keyboard.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Shader.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
+    <ClCompile Include="SystemFirehot.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Vectors.cpp">
+      <Filter>Arquivos de Origem\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Arquivos de Origem\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Arquivos de Origem\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Arquivos de Origem\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Arquivos de Origem\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Arquivos de Origem\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Arquivos de Origem\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Commands.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
     <ClInclude Include="Keyboard.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="Engine.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemFirehot.hpp">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.hpp">
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
+    </ClInclude>
     <ClInclude Include="Camera.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="UI.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="firehot.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
+    <ClInclude Include="Transform.hpp">
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
     </ClInclude>
     <ClInclude Include="Vectors.hpp">
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.hpp">
+      <Filter>Arquivos de Cabeçalho\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.hpp">
+      <Filter>Arquivos de Cabeçalho\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.hpp">
+      <Filter>Arquivos de Cabeçalho\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.hpp">
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components_UI.hpp">
+      <Filter>Arquivos de Cabeçalho\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Sprite.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Components\UI</Filter>
     </None>
   </ItemGroup>
 </Project>
